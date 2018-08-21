@@ -1,0 +1,14 @@
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.deps.json
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.runtimeconfig.json
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.runtimeconfig.dev.json
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.dll
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.pdb
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.csprojAssemblyReference.cache
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.csproj.CoreCompileInputs.cache
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorAssemblyInfo.cache
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorAssemblyInfo.cs
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.AssemblyInfoInputs.cache
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.AssemblyInfo.cs
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorTargetAssemblyInfo.cache
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.dll
+C:\Users\Marcin Lesicki\source\repos\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.pdb
