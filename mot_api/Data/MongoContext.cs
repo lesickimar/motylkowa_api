@@ -25,7 +25,7 @@ namespace mot_api.Data
         {
             get
             {
-                return _database.GetCollection<TextModel>("mot");
+                return _database.GetCollection<TextModel>("mot_text");
             }
         }
 

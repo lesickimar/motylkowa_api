@@ -55,8 +55,8 @@ namespace mot_api
 
             //app.UseMvc(routes =>
             //{
-                //routes.MapRoute("category", "{controller=Photo}/{action=GetCategory}/{category?}");
-                //routes.MapRoute("id", "{controller=Photo}/{action=GetPhoto}/{id?}");
+            //routes.MapRoute("category", "{controller=Photo}/{action=GetCategory}/{category?}");
+            //routes.MapRoute("id", "{controller=Photo}/{action=GetPhoto}/{id?}");
             //});
 
             app.UseHttpsRedirection();
