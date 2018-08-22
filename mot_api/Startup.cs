@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using mot_api.Data;
+using mot_api.Repository;
 using mot_api.ViewModels;
 
 namespace mot_api
@@ -36,7 +37,8 @@ namespace mot_api
             });
 
             services.AddTransient<ITextRepository, TextRepository>();
-            
+            services.AddTransient<IPhotoRepository, PhotoRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +52,12 @@ namespace mot_api
             {
                 app.UseHsts();
             }
+
+            //app.UseMvc(routes =>
+            //{
+                //routes.MapRoute("category", "{controller=Photo}/{action=GetCategory}/{category?}");
+                //routes.MapRoute("id", "{controller=Photo}/{action=GetPhoto}/{id?}");
+            //});
 
             app.UseHttpsRedirection();
             app.UseMvc();

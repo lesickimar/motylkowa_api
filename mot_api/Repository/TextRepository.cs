@@ -21,11 +21,11 @@ namespace mot_api.ViewModels
 
 
 
-        public async Task<IEnumerable<TextModel2>> GetAllText()
+        public async Task<IEnumerable<TextModel>> GetAllText()
         {
             try
             {
-                return await _context.Test.Find(_ => true).ToListAsync();
+                return await _context.TextMongo.Find(_ => true).ToListAsync();
             }
             catch(Exception ex)
             {
@@ -34,12 +34,12 @@ namespace mot_api.ViewModels
             }
         }
 
-        public async Task<TextModel2> GetText(string id)
+        public async Task<TextModel> GetText(string id)
         {
             try
             {
                 ObjectId internalId = GetInternalId(id);
-                return await _context.Test.Find(q => q.InternalId == internalId).FirstOrDefaultAsync();
+                return await _context.TextMongo.Find(q => q.InternalId == internalId).FirstOrDefaultAsync();
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace mot_api.ViewModels
             }
         }
 
-        private ObjectId GetInternalId(string id)
+        private ObjectId GetInternalId(string id) //change id for ObjectID mongo
         {
             ObjectId internalId;
             if (!ObjectId.TryParse(id, out internalId))
@@ -55,6 +55,27 @@ namespace mot_api.ViewModels
 
             return internalId;
         }
+
+        public async Task ChangeText(string id, string textChange)
+        {
+            if (!string.IsNullOrWhiteSpace(textChange))
+            {
+                try
+                {
+                    ObjectId internalId = GetInternalId(id);
+                    var filter = Builders<TextModel>.Filter.Eq(q => q.InternalId, internalId);
+                    var update = Builders<TextModel>.Update.Set(q => q.name, textChange);
+
+                    UpdateResult actionResult = await _context.TextMongo.UpdateOneAsync(filter, update);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }            
+        }
+
         //public List<TextModel> SendTextFromID(int id)
         //{
         //    List<TextModel> newList = new List<TextModel>();

@@ -22,9 +22,21 @@ namespace mot_api.Controllers
             _textRepository = textRepository;
         }
 
-        public async Task<IEnumerable<TextModel2>> Get()
+        public async Task<IEnumerable<TextModel>> Get()
         {
             return await _textRepository.GetAllText();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<TextModel> Get(string id)
+        {
+            return await _textRepository.GetText(id);
+        }
+
+        [HttpPut("{id}")]
+        public async Task Update(string id, [FromBody] string textChange)
+        {
+            await _textRepository.ChangeText(id, textChange);
         }
         //private TextViewModel textViewModel = new TextViewModel();
 

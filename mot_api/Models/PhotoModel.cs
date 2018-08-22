@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace mot_api.Models
 {
-    public class TextModel 
+    public class PhotoModel
     {
         [BsonId]
         public ObjectId InternalId { get; set; }
 
         public string name { get; set; }
-        public int age { get; set; }
+        public string url { get; set; }
+        public string category { get; set; }
     }
-
-
 }

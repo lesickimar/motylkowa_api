@@ -21,11 +21,19 @@ namespace mot_api.Data
             }
         }
 
-        public IMongoCollection<TextModel2> Test
+        public IMongoCollection<TextModel> TextMongo
         {
             get
             {
-                return _database.GetCollection<TextModel2>("mot");
+                return _database.GetCollection<TextModel>("mot");
+            }
+        }
+
+        public IMongoCollection<PhotoModel> PhotoMongo
+        {
+            get
+            {
+                return _database.GetCollection<PhotoModel>("mot");
             }
         }
     }

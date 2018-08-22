@@ -8,8 +8,9 @@ namespace mot_api.Data
 {
     public interface ITextRepository
     {
-        Task<IEnumerable<TextModel2>> GetAllText();
-        Task<TextModel2> GetText(string id);
+        Task<IEnumerable<TextModel>> GetAllText();
+        Task<TextModel> GetText(string id);
+        Task ChangeText(string id, string textChange);
 
         //Task<IEnumerable<TextModel2>> GetText(string id);
 

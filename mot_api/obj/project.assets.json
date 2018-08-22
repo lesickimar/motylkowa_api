@@ -13308,11 +13308,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcin Lesicki\\source\\repos\\mot_api\\mot_api\\mot_api.csproj",
+      "projectUniqueName": "E:\\testss\\mot_api\\mot_api\\mot_api.csproj",
       "projectName": "mot_api",
-      "projectPath": "C:\\Users\\Marcin Lesicki\\source\\repos\\mot_api\\mot_api\\mot_api.csproj",
+      "projectPath": "E:\\testss\\mot_api\\mot_api\\mot_api.csproj",
       "packagesPath": "C:\\Users\\Marcin Lesicki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcin Lesicki\\source\\repos\\mot_api\\mot_api\\obj\\",
+      "outputPath": "E:\\testss\\mot_api\\mot_api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
