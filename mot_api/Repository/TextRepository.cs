@@ -34,12 +34,12 @@ namespace mot_api.ViewModels
             }
         }
 
-        public async Task<TextModel> GetText(string id)
+        public async Task<TextModel> GetText(int id)
         {
             try
             {
-                ObjectId internalId = GetInternalId(id);
-                return await _context.TextMongo.Find(q => q.InternalId == internalId).FirstOrDefaultAsync();
+                //ObjectId internalId = GetInternalId(id);
+                return await _context.TextMongo.Find(q => q.id == id).FirstOrDefaultAsync();
             }
             catch (Exception ex)
             {
@@ -47,24 +47,24 @@ namespace mot_api.ViewModels
             }
         }
 
-        private ObjectId GetInternalId(string id) //change id for ObjectID mongo
-        {
-            ObjectId internalId;
-            if (!ObjectId.TryParse(id, out internalId))
-                internalId = ObjectId.Empty;
+        //private ObjectId GetInternalId(string id) //change id for ObjectID mongo
+        //{
+        //    ObjectId internalId;
+        //    if (!ObjectId.TryParse(id, out internalId))
+        //        internalId = ObjectId.Empty;
 
-            return internalId;
-        }
+        //    return internalId;
+        //}
 
-        public async Task ChangeText(string id, string textChange)
+        public async Task ChangeText(int id, string textChange)
         {
             if (!string.IsNullOrWhiteSpace(textChange))
             {
                 try
                 {
-                    ObjectId internalId = GetInternalId(id);
-                    var filter = Builders<TextModel>.Filter.Eq(q => q.InternalId, internalId);
-                    var update = Builders<TextModel>.Update.Set(q => q.name, textChange);
+                    //ObjectId internalId = GetInternalId(id);
+                    var filter = Builders<TextModel>.Filter.Eq(q => q.id, id);
+                    var update = Builders<TextModel>.Update.Set(q => q.text, textChange);
 
                     UpdateResult actionResult = await _context.TextMongo.UpdateOneAsync(filter, update);
 

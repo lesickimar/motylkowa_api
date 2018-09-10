@@ -12,8 +12,9 @@ namespace mot_api.Models
         [BsonId]
         public ObjectId InternalId { get; set; }
 
+        public int id { get; set; }
         public string name { get; set; }
-        public int age { get; set; }
+        public string text { get; set; }
     }
 
 

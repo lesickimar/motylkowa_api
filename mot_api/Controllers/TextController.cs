@@ -28,13 +28,13 @@ namespace mot_api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<TextModel> Get(string id)
+        public async Task<TextModel> Get(int id)
         {
             return await _textRepository.GetText(id);
         }
 
         [HttpPut("{id}")]
-        public async Task Update(string id, [FromBody] string textChange)
+        public async Task Update(int id, [FromBody] string textChange)
         {
             await _textRepository.ChangeText(id, textChange);
         }
