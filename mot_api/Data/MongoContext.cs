@@ -36,5 +36,13 @@ namespace mot_api.Data
                 return _database.GetCollection<PhotoModel>("mot");
             }
         }
+
+        public IMongoCollection<DocumentModel> DocumentMongo
+        {
+            get
+            {
+                return _database.GetCollection<DocumentModel>("mot_doc");
+            }
+        }
     }
 }

@@ -39,6 +39,7 @@ namespace mot_api
 
             services.AddTransient<ITextRepository, TextRepository>();
             services.AddTransient<IPhotoRepository, PhotoRepository>();
+            services.AddTransient<IDocumentRepository, DocumentRepository>();
 
         }
 
