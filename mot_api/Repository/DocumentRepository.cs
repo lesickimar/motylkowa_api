@@ -23,7 +23,7 @@ namespace mot_api.Repository
             try
             {
                 var _id = await _context.DocumentMongo.Find(q => q.id == id).FirstOrDefaultAsync();
-                var path = @"E:\testss\mot\motylkowa_ang\src\assets\design_pattern.pdf";
+                var path = @"" + _id.link;
                 var byteArray = await System.IO.File.ReadAllBytesAsync(path);
                 var fileData = Convert.ToBase64String(byteArray);
                 return fileData;
