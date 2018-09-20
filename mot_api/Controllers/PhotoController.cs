@@ -22,33 +22,33 @@ namespace mot_api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<PhotoModel> GetPhoto(string id)
+        public async Task<PhotoModel> GetPhoto(int id)
         {
             return await _photoRepository.GetPhoto(id);
         }
             
-        [HttpGet("category/{category}")]
-        public async Task<IEnumerable<PhotoModel>> GetCategory(string category)
+        [HttpGet("gallery/{gallery}")]
+        public async Task<IEnumerable<PhotoModel>> GetGallery(int gallery)
         {
-            return await _photoRepository.GetCategory(category);
+            return await _photoRepository.GetGallery(gallery);
         }
 
-        [HttpGet("categorylist")]
-        public async Task<IEnumerable<string>> GetCategoryList()
+        [HttpGet("gallerylist")]
+        public async Task<IEnumerable<string>> GetGalleryList()
         {
-            return await _photoRepository.GetCategoryList();
+            return await _photoRepository.GetGalleryList();
         }
 
-        [HttpPost]
-        public async Task AddPhoto([FromBody] PhotoModel photoModel)
-        {
-            await _photoRepository.AddPhoto(photoModel);
-        }
+        //[HttpPost]
+        //public async Task AddPhoto([FromBody] PhotoModel photoModel)
+        //{
+        //    await _photoRepository.AddPhoto(photoModel);
+        //}
 
-        [HttpPut("{id}")]
-        public async Task ChangePhoto(string id, [FromBody] PhotoModel photoModel)
-        {
-            await _photoRepository.ChangePhoto(id, photoModel);
-        }
+        //[HttpPut("{id}")]
+        //public async Task ChangePhoto(string id, [FromBody] PhotoModel photoModel)
+        //{
+        //    await _photoRepository.ChangePhoto(id, photoModel);
+        //}
     }
 }

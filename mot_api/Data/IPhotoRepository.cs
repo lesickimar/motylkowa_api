@@ -8,11 +8,11 @@ namespace mot_api.Data
 {
     public interface IPhotoRepository
     {
-        Task ChangePhoto(string id, PhotoModel photoModel);
-        Task AddPhoto(PhotoModel photoModel);
-        Task<PhotoModel> DeletePhoto(string id);
-        Task<PhotoModel> GetPhoto(string id);
-        Task<IEnumerable<PhotoModel>> GetCategory(string category);
-        Task<IEnumerable<string>> GetCategoryList();
+        //Task ChangePhoto(int id, PhotoModel photoModel);
+        //Task AddPhoto(PhotoModel photoModel);
+        //Task DeletePhoto(int id);
+        Task<PhotoModel> GetPhoto(int id);
+        Task<IEnumerable<PhotoModel>> GetGallery(int gallery);
+        Task<IEnumerable<string>> GetGalleryList();
     }
 }

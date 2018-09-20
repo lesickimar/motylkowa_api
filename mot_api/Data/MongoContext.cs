@@ -33,7 +33,7 @@ namespace mot_api.Data
         {
             get
             {
-                return _database.GetCollection<PhotoModel>("mot");
+                return _database.GetCollection<PhotoModel>("mot_photo");
             }
         }
 
