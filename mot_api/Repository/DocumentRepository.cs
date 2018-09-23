@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using mot_api.Configuration;
 using mot_api.Data;
 using mot_api.Models;
 using System;
@@ -11,6 +12,8 @@ namespace mot_api.Repository
 {
     public class DocumentRepository : IDocumentRepository
     {
+
+        private EmailSender email = new EmailSender();
         private readonly MongoContext _context = null;
 
         public DocumentRepository(IOptions<Settings> settings)
@@ -28,8 +31,9 @@ namespace mot_api.Repository
                 var fileData = Convert.ToBase64String(byteArray);
                 return fileData;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Document download");
                 throw ex;
             }
         }
@@ -42,6 +46,7 @@ namespace mot_api.Repository
             }
             catch(Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Documents full list");
                 throw ex;
             }
         }

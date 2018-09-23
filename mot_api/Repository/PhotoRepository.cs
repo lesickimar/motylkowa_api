@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using mot_api.Configuration;
 using mot_api.Data;
 using mot_api.Models;
 using System;
@@ -12,6 +13,7 @@ namespace mot_api.Repository
 {
     public class PhotoRepository : IPhotoRepository
     {
+        private EmailSender email = new EmailSender();
         private readonly MongoContext _context = null;
 
         public PhotoRepository(IOptions<Settings> settings)
@@ -36,6 +38,7 @@ namespace mot_api.Repository
             }
             catch(Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Get Photo by id");
                 throw ex;
             }
         }
@@ -48,6 +51,7 @@ namespace mot_api.Repository
             }
             catch (Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Gallery download");
                 throw ex;
             }
         }
@@ -61,6 +65,7 @@ namespace mot_api.Repository
             }
             catch (Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Gallery list by name");
                 throw ex;
             }
         }
@@ -73,6 +78,7 @@ namespace mot_api.Repository
             }
             catch(Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Add photo");
                 throw ex;
             }
         }

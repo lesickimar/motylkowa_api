@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using mot_api.Configuration;
 using mot_api.Data;
 using mot_api.Models;
 using System;
@@ -12,6 +13,7 @@ namespace mot_api.ViewModels
 {
     public class TextRepository : ITextRepository
     {
+        private EmailSender email = new EmailSender();
         private readonly MongoContext _context = null;
 
         public TextRepository(IOptions<Settings> settings)
@@ -29,7 +31,7 @@ namespace mot_api.ViewModels
             }
             catch(Exception ex)
             {
-                //manage exeptions in the future
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Get all text download");
                 throw ex;
             }
         }
@@ -43,6 +45,7 @@ namespace mot_api.ViewModels
             }
             catch (Exception ex)
             {
+                email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Get text by id download");
                 throw ex;
             }
         }
@@ -71,6 +74,7 @@ namespace mot_api.ViewModels
                 }
                 catch (Exception ex)
                 {
+                    email.EmailSend("Stack trace message \n" + ex.StackTrace + "\n Exception full info \n" + ex, "Change text by id download");
                     throw ex;
                 }
             }            
