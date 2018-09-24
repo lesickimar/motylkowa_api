@@ -12,7 +12,7 @@ namespace mot_api.Data
         //Task AddPhoto(PhotoModel photoModel);
         //Task DeletePhoto(int id);
         Task<PhotoModel> GetPhoto(int id);
-        Task<IEnumerable<PhotoModel>> GetGallery(int gallery);
+        Task<IEnumerable<PhotoModel>> GetGallery(string gallery);
         Task<IEnumerable<string>> GetGalleryList();
     }
 }

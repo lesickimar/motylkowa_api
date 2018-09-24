@@ -28,7 +28,7 @@ namespace mot_api.Controllers
         }
             
         [HttpGet("gallery/{gallery}")]
-        public async Task<IEnumerable<PhotoModel>> GetGallery(int gallery)
+        public async Task<IEnumerable<PhotoModel>> GetGallery(string gallery)
         {
             return await _photoRepository.GetGallery(gallery);
         }

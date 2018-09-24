@@ -26,3 +26,17 @@ E:\testss\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.AssemblyInfo.cs
 E:\testss\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorTargetAssemblyInfo.cache
 E:\testss\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.dll
 E:\testss\mot_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.pdb
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.deps.json
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.runtimeconfig.json
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.runtimeconfig.dev.json
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.dll
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\bin\Debug\netcoreapp2.1\mot_api.pdb
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.csprojAssemblyReference.cache
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.csproj.CoreCompileInputs.cache
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorAssemblyInfo.cache
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorAssemblyInfo.cs
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.AssemblyInfoInputs.cache
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.AssemblyInfo.cs
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.RazorTargetAssemblyInfo.cache
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.dll
+E:\Motylkowa_Kraina\motylkowa_api\motylkowa_api\mot_api\obj\Debug\netcoreapp2.1\mot_api.pdb
