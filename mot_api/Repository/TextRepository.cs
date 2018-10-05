@@ -4,6 +4,7 @@ using MongoDB.Driver;
 using mot_api.Configuration;
 using mot_api.Data;
 using mot_api.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,15 +60,16 @@ namespace mot_api.ViewModels
         //    return internalId;
         //}
 
-        public async Task ChangeText(int id, string textChange)
+        public async Task ChangeText(JObject textChange)
         {
-            if (!string.IsNullOrWhiteSpace(textChange))
+            var _textChange = textChange.ToObject<TextModel>();
+            if (!string.IsNullOrWhiteSpace(_textChange.text))
             {
                 try
                 {
                     //ObjectId internalId = GetInternalId(id);
-                    var filter = Builders<TextModel>.Filter.Eq(q => q.id, id);
-                    var update = Builders<TextModel>.Update.Set(q => q.text, textChange);
+                    var filter = Builders<TextModel>.Filter.Eq(q => q.id, _textChange.id);
+                    var update = Builders<TextModel>.Update.Set(q => q.text, _textChange.text);
 
                     UpdateResult actionResult = await _context.TextMongo.UpdateOneAsync(filter, update);
 

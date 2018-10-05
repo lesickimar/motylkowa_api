@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using mot_api.Data;
 using mot_api.Models;
 using mot_api.ViewModels;
+using Newtonsoft.Json.Linq;
 
 namespace mot_api.Controllers
 {
@@ -21,7 +22,7 @@ namespace mot_api.Controllers
         {
             _textRepository = textRepository;
         }
-
+        [HttpGet]
         public async Task<IEnumerable<TextModel>> Get()
         {
             return await _textRepository.GetAllText();
@@ -33,9 +34,10 @@ namespace mot_api.Controllers
             return await _textRepository.GetText(id);
         }
 
-        [HttpPut("{id}")]
-        public async Task Update(int id, [FromBody] string textChange)
+        [HttpPut]
+        public async Task Update([FromBody] JObject _textChange)
         {
+            int id = 2;
             await _textRepository.ChangeText(id, textChange);
         }
         //private TextViewModel textViewModel = new TextViewModel();

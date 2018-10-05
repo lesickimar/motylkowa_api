@@ -1,4 +1,5 @@
 ﻿using mot_api.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace mot_api.Data
     {
         Task<IEnumerable<TextModel>> GetAllText();
         Task<TextModel> GetText(int id);
-        Task ChangeText(int id, string textChange);
+        Task ChangeText(JObject textChange);
 
         //Task<IEnumerable<TextModel2>> GetText(string id);
 
